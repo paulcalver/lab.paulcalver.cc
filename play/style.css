@@ -1,23 +1,26 @@
 /* base reset */
-html, body { margin: 0; padding: 0; height: 100%; }
-body { background: #f1f1f1; font-family: 'Space Mono', monospace; }
-
-/* canvas fix (removes baseline gap) */
-canvas { display: block; }
-
-/* SKETCH PAGES ONLY */
-body.sketch { background: #000; overflow: hidden; }
-body.sketch .logo { color: #fff; }
+html, body {
+  margin: 0;
+  padding: 0;
+}
 
 /* LANDING PAGE ONLY */
 body.landing {
-  min-height: 100svh;           /* handles mobile UI chrome better than 100vh */
+  /* font styling */
+  background: #f1f1f1;
+  font-family: 'Space Mono', monospace;
+
+  /* centring */
+  min-height: 100vh;   /* fallback */
+  min-height: 100dvh;  /* modern */
   display: grid;
   place-items: center;
 }
 
 /* shared UI */
-.wrapper { text-align: center; }
+.wrapper {
+  text-align: center;
+}
 
 .logo {
   font-size: 18px;
@@ -39,4 +42,6 @@ body.landing {
   margin: 0.5rem 0;
 }
 
-.nav-link:hover { text-decoration: underline; }
+.nav-link:hover {
+  text-decoration: underline;
+}
