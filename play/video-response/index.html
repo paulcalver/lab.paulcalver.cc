@@ -1,22 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Video > Response</title>
+  <title>Video > Response</title>
 
-    <link rel="stylesheet" type="text/css" href="style.css">
-
-    <script src="libraries/p5.min.js"></script>
-    <script src="libraries/p5.sound.min.js"></script>
-    <link
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="libraries/p5.min.js"></script>
+  <script src="libraries/p5.sound.min.js"></script>
+     <link
 	  href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
 	  rel="stylesheet"
 	/>
-  </head>
+</head>
+<body>
+  <!-- Home button -->
+  
+  <!-- Centered pair (video + viz) -->
+  <div class="stage">
+	<div class="pair">
+	  <!-- LEFT: 3:4 portrait video -->
+	  <div class="frame" id="videoFrame" aria-label="3:4 portrait frame">
+		<video id="vid" playsinline muted loop src="video/soar_01.mp4"></video>
+	  </div>
 
-  <body>
-    <script src="sketch.js"></script>
-  </body>
+	  <!-- RIGHT: same-sized frame for the viz -->
+	  <div class="frame" id="vizFrame" aria-label="Visual frame">
+		<canvas id="viz"></canvas>
+	  </div>
+	</div>
+  </div>
+
+  <script src="sketch.js"></script>
+</body>
 </html>

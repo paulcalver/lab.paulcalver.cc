@@ -20,7 +20,7 @@ function draw() {
   if (mouseIsPressed) {
   hide = 255;
   sw = 0;
-  str = '*_*';
+  str = 'YAY!';
   } else {
   hide = 0;
   sw = 12;
@@ -37,15 +37,15 @@ function draw() {
     circle(mouseX, mouseY, cw);
 
   }
-  
   // Text Follows Mouse
-  strokeWeight(sw);
+  strokeWeight(5);
   stroke(bgColor);
   fill(255,0,0);
-  textSize(42);
+  textSize(22);
   textStyle(BOLD);
   textAlign(CENTER, CENTER);
   text(str, mouseX, mouseY);
+  
 
 }
 
