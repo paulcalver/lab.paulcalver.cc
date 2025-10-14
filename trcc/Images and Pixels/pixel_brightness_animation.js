@@ -17,7 +17,7 @@ const MAX_TILES = 90;
 let phase = 0;            // 0..1 progress through the cycle
 
 function preload() {
-  img = loadImage('assets/Blood_Sweat_Tears_Adam_B0004364_WEB.jpg');
+  img = loadImage('assets/image.jpg');
 }
 
 function setup() {
