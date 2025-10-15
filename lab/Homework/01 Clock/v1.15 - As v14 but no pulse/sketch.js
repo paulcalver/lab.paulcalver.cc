@@ -51,42 +51,27 @@ function draw() {
   // Colour Tests:
 
     // >> 01 - Full Spectrum Hue and Sat:
-    // let mainHue = map(mouseX, 0, width,0, 360);
-    // let oppositeHue = map(mainHue, 0, 360, 360, 0); // reversed mapping
-
-    // let mainSat = map(mouseX, 0, width, 0, 100);
-    // let oppositeSat = map(mainSat, 0, 100, 100, 0); // reversed mapping
-
+    // let hueMin = 0;
+    // let hueMax = 360;
+    // let satMin = 0;
+    // let satMax = 100;
+    // let mainHue = map(mouseX, 0, width,hueMin, hueMax);
+    // let oppositeHue = map(mainHue, hueMin, hueMax, hueMax, hueMin); // reversed mapping
+    // let mainSat = map(mouseX, 0, width, satMin, satMax);
+    // let oppositeSat = map(mainSat, satMin, satMax, satMax, satMin); // reversed mapping
     // bgColor = color(mainHue, mainSat, 90, 1);
     // blockColorB = color(oppositeHue, oppositeSat, 90, 1);
 
-    // >> 02 - Fixed Hue & Sat Varialbe within restricted rangle:
-    // let mainSat = map(mouseX, 0, width, 40, 65);
-    // let oppositeSat = map(mainSat, 40, 65, 65, 40); // reversed mapping
-
-    // bgColor = color(337, mainSat, 90, 1);
-    // blockColorB = color(10, oppositeSat, 90, 1);
-
-    // >> 03 - Hue + Sat Fixed, Brightness variable and opposite
-    // let mainBrightness = map(mouseX, 0, width,70, 100);
-    // let oppositeBrightness = map(mainBrightness, 70, 100, 100, 70); // reversed mapping
-
-    // bgColor = color(160, 20, mainBrightness, 1);
-    // blockColorB = color(160, 20, oppositeBrightness, 1);
-
-    // >> 04 - Sat + Brightness Fixed, Hue variable and opposite
-    let mainHue = map(mouseX, 0, width,20, 360);
-    let oppositeHue = map(mainHue, 20, 360, 360, 20); 
+    // >> 02 - Sat + Brightness Fixed, Hue variable and opposite
+    let hueMin = 0;
+    let hueMax = 70;
+    let mainHue = map(mouseX, 0, width,hueMin, hueMax);
+    let oppositeHue = map(mainHue,hueMin, hueMax, hueMax, hueMin); 
     bgColor = color(mainHue, 30, 100, 1);
     blockColorB = color(oppositeHue, 40, 100, 1);  // < Slight Sat difference so it never dissapears
 
-    
- 
-  
   background(bgColor);
 
-
-  //mainSat = map(mouseY,0,height,0,100);
 
   // layout quarters (no margins)
   const availW = width;
