@@ -32,7 +32,7 @@ function draw() {
   let phase = cycleTime / 60000; // 0 to 1 over the minute
 
   // Noise increasing over each minute
-  let easedPhase = easeInExpo(phase);       // 0..1 eased
+  let easedPhase = easeInExpo(phase);     
   let shaped = pow(easedPhase, 4.0);
   let noiseScale = lerp(0.1, 20, shaped);
 
@@ -72,7 +72,7 @@ function draw() {
     fill(255, 255, 255, 200);
 
     // Pause Text
-    let message = "TIME IS ON HOLD";
+    let message = "TIME IS ON HOLD\nCLICK TO RESUME";
     let targetWidth = width * 0.9; // Use 90% of canvas width
     let size = 200; // Start with a large size
     textSize(size);
@@ -82,7 +82,7 @@ function draw() {
       size -= 5;
       textSize(size);
     }
-    text("TIME IS ON HOLD\nCLICK TO RESUME", width / 2, height / 2);
+    text(message, width / 2, height / 2);
   }
 
 }

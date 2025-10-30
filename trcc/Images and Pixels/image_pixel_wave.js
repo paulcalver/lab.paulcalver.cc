@@ -28,10 +28,10 @@ function draw() {
 
   for (let x = 0; x < tilesX; x++) {
     for (let y = 0; y < tilesY; y++) {
-      let waveX = map(
-        sin(radians(frameCount + x * 1 + y * 3)), -1, 1, -20, 20);
-      let waveY = map(
-        sin(radians(frameCount + x * 2 + y * 1)), -1, 1, -20, 20);
+      // let waveX = map(
+      //   sin(radians(frameCount + x * 1 + y * 3)), -1, 1, -20, 20);
+      // let waveY = map(
+      //   sin(radians(frameCount + x * 2 + y * 1)), -1, 1, -20, 20);
 
       let c = img.get(x,y);
       let b = brightness(c);
@@ -39,11 +39,15 @@ function draw() {
       fill(b * 2.5);
 
       push();
-      translate(x * tileW + waveX, y * tileH + waveY);
+      translate(x * tileW, y * tileH);
       rect(0, 0, tileW, tileH);
       pop();
     }
   }
 
   pop();
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
