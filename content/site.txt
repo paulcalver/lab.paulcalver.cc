@@ -1,0 +1,17 @@
+Title: Home
+
+----
+
+Sitetitle: *_*
+
+----
+
+About: Text
+
+----
+
+Email: paulcalver@me.com
+
+----
+
+Footerlinks: 

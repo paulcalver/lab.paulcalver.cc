@@ -1,0 +1,46 @@
+title: Project
+
+columns:
+  - width: 2/3
+    sections:
+      content:
+        type: fields
+        fields:
+          title:
+            type: text
+            label: Title
+            required: true
+          
+          description:
+            type: textarea
+            label: Description
+            size: small
+          
+          link:
+            type: url
+            label: Project Link
+            required: true
+          
+          date:
+            type: date
+            label: Date
+            default: now
+            required: true
+          
+          tag:
+            type: text
+            label: Tag
+            placeholder: e.g. Goldsmiths Lab, Experimental
+            required: true
+
+  - width: 1/3
+    sections:
+      preview:
+        type: fields
+        fields:
+          preview:
+            type: files
+            label: Preview Image
+            layout: cards
+            max: 1
+            query: page.images

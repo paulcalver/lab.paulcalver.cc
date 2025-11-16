@@ -1,0 +1,52 @@
+title: Site
+options:
+  preview: /
+
+columns:
+  - width: 1/3
+    sections:
+      viewsite:
+        type: info
+        headline: View Site
+        text: <a href="/" target="_blank">Open website →</a>
+      
+      info:
+        type: fields
+        fields:
+          siteTitle:
+            type: text
+            label: Site Title
+            default: "*_*"
+          
+          about:
+            type: textarea
+            label: About
+            size: small
+          
+          email:
+            type: email
+            label: Email
+          
+          footerLinks:
+            type: structure
+            label: Footer Links
+            fields:
+              text:
+                type: text
+                label: Link Text
+              url:
+                type: url
+                label: URL
+  
+  - width: 2/3
+    sections:
+      projects:
+        type: pages
+        label: Projects
+        template: project
+        layout: list
+        image:
+          query: page.images.first
+          cover: true
+        info: "{{ page.date.toDate('m/Y') }} - {{ page.tag }}"
+

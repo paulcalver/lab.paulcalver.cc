@@ -1,0 +1,25 @@
+Title: Animation x Sound
+
+----
+
+Description: An interactive sound making experiment, playing with frequency and speed of balls  which trigger sounds.  Change the settings to make new compositions.
+
+----
+
+Link: https://paulcalver.studio/lab/av/animation_x_sound/
+
+----
+
+Date: 2025-11-10
+
+----
+
+Tag: Goldsmiths Lab
+
+----
+
+Preview: - file://7wst35swktsd0o7i
+
+----
+
+Uuid: iql4xshmj3ipfmos

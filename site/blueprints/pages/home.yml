@@ -1,0 +1,13 @@
+title: Home
+icon: 📚
+
+sections:
+  projects:
+    type: pages
+    label: Projects
+    template: project
+    layout: list
+    image:
+      query: page.preview.toFile
+      cover: true
+    info: "{{ page.date.toDate('m/Y') }} - {{ page.tag }}"

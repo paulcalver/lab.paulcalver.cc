@@ -1,0 +1,25 @@
+Title: Weather
+
+----
+
+Description: 
+
+----
+
+Link: https://paulcalver.studio/lab/av/weather/
+
+----
+
+Date: 2025-11-01
+
+----
+
+Tag: Goldsmiths Lab
+
+----
+
+Preview: - file://77vie44m00kdpd6f
+
+----
+
+Uuid: dxiwlt08s0wvwl0g

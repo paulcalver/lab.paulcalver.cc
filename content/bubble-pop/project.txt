@@ -1,0 +1,25 @@
+Title: Bubble Pop
+
+----
+
+Description: Early p5.js experimentation
+
+----
+
+Link: https://paulcalver.studio/play/bubble-pop/
+
+----
+
+Date: 2025-09-01
+
+----
+
+Tag: Play
+
+----
+
+Preview: - file://ba0gyqnlvugqewep
+
+----
+
+Uuid: wwpctyi4kwo7jbto

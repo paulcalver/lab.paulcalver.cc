@@ -10,7 +10,7 @@ let maxSpeed = 5;
 function setup() {
   createCanvas(windowWidth, windowHeight);
   noStroke();
-  numCircles = int(random(1, 5000));
+  numCircles = int(random(1, 1000));
   for (let i = 0; i < numCircles; i++) {
     let size = random(10, 100);
     circleSize.push(size);
@@ -18,7 +18,8 @@ function setup() {
     positionY.push(random(size/2, height - size/2));
     velocityX.push(random(-maxSpeed, maxSpeed)); // Random horizontal speed
     velocityY.push(random(-maxSpeed, maxSpeed)); // Random vertical speed
-    fillColor.push(color(random(255), random(255), random(255), 100));
+    //fillColor.push(color(random(150,255), random(255), random(255), 100));
+    fillColor.push(color(random(150,255), 100));
   }
 }
 
@@ -70,7 +71,8 @@ function mousePressed() {
     positionY.push(random(size/2, height - size/2));
     velocityX.push(random(-maxSpeed, maxSpeed));
     velocityY.push(random(-maxSpeed, maxSpeed));
-    fillColor.push(color(random(255), random(255), random(255), 100));
+    //fillColor.push(color(random(255), random(255), random(255), 100));
+    fillColor.push(color(random(150,255), 100));
   }
 }
 

@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  padding: 3%;
+  background: #f3f3f3;
+}
+
+.header {
+  margin-bottom: 0px;
+  padding-bottom: 20px;
+}
+
+.site-title {
+  margin-bottom: 20px;
+}
+
+.project-list {
+  display: table;
+  border-collapse: collapse;
+}
+
+.project-row {
+  display: table-row;
+}
+
+.project-row > div {
+  display: table-cell;
+  padding: 20px 80px 20px 0;
+  white-space: nowrap;
+  vertical-align: top;
+  border-top: 1px solid black;
+}
+
+.project-row .title {
+  white-space: normal;
+  max-width: 400px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.project-title {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.bottom-line > div {
+  height: 0;
+}
+
+.header-row {
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+}
+
+.header-row > div {
+  border-top: none;
+}
+
+.header-row > div:hover {
+  text-decoration: underline;
+}
+
+.preview img {
+  width: 150px;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: black;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: black;
+}
+
+a:active {
+  color: black;
+}
+
+.footer-links {
+  margin-top: 0px;
+}
+
+.footer-links .separator {
+  margin: 0 10px;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+  
+  .project-list {
+    display: block;
+  }
+  
+  .project-row {
+    display: block;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid black;
+  }
+  
+  .project-row > div {
+    display: block;
+    padding: 0;
+    margin-bottom: 10px;
+    white-space: normal;
+    border-top: none;
+  }
+  
+  .project-row .date {
+    margin-bottom: 2px;
+  }
+  
+  .project-row .tag {
+    margin-bottom: 10px;
+  }
+  
+  .project-row .title {
+    max-width: 100%;
+  }
+  
+  .header-row {
+    display: none;
+  }
+  
+  .bottom-line {
+    display: none;
+  }
+  
+  .preview img {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .date {
+    margin-bottom: 2px;
+  }
+  
+  .tag {
+    margin-bottom: 10px;
+  }
+  
+  .date::before {
+    content: "Date: ";
+    font-weight: bold;
+  }
+  
+  .tag::before {
+    content: "Tag: ";
+    font-weight: bold;
+  }
+}
