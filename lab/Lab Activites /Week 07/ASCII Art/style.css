@@ -1,0 +1,16 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 6px;
+  line-height: 0.6;
+  background-color: aquamarine;
+  p {
+    color: #F26522; /* A warm orange tone */
+  }
+  
+}
+
+
+canvas {
+  display: block;
+}

@@ -1,0 +1,40 @@
+{
+  "note": "Top 50, Emotions / Animals & Contries mentioned in UK social media, click to suffle.",  "emotions_ranked": [
+    "happy", "love", "sad", "angry", "mad", "tired", "excited", "bored",
+    "depressed", "lonely", "stressed", "anxious", "worried", "scared",
+    "afraid", "frustrated", "annoyed", "upset", "proud", "grateful",
+    "thankful", "blessed", "hopeful", "inspired", "motivated", "nervous",
+    "relieved", "calm", "relaxed", "peaceful", "content", "jealous",
+    "guilty", "ashamed", "embarrassed", "awkward", "confused",
+    "overwhelmed", "nostalgic", "curious", "surprised", "shocked",
+    "amused", "funny", "hilarious", "miserable", "devastated",
+    "heartbroken", "euphoric"
+  ],
+  "animals_ranked": [
+    "dog", "cat", "bird", "fish", "horse", "cow", "chicken", "bear", "lion",
+    "tiger", "rabbit", "monkey", "elephant", "fox", "wolf", "duck", "goose",
+    "pig", "mouse", "rat", "snake", "frog", "deer", "sheep", "goat", "bee",
+    "butterfly", "shark", "whale", "dolphin", "penguin", "owl", "eagle",
+    "parrot", "turtle", "lizard", "kangaroo", "panda", "koala", "giraffe",
+    "zebra", "camel", "squirrel", "hedgehog", "hamster", "octopus", "crab",
+    "spider", "ant"
+  ],
+  "countries_ranked": [
+    "United States", "United Kingdom", "Canada", "Australia", "India",
+    "China", "Russia", "Germany", "France", "Japan", "Brazil", "Spain",
+    "Italy", "Mexico", "South Korea", "Argentina", "South Africa", "Turkey",
+    "Netherlands", "Sweden", "Norway", "Denmark", "Ireland", "New Zealand",
+    "Switzerland", "Poland", "Portugal", "Saudi Arabia",
+    "United Arab Emirates", "Israel", "Pakistan", "Bangladesh", "Indonesia",
+    "Philippines", "Vietnam", "Thailand", "Egypt", "Kenya", "Nigeria",
+    "Ghana", "Colombia", "Chile", "Peru", "Belgium", "Austria", "Greece",
+    "Czech Republic", "Singapore", "Malaysia"
+  ],
+  "emojis_ranked": [
+    "😂", "❤️", "😭", "😍", "😊", "😩", "🙏", "😅", "💀", "💕", "🤣", "✨",
+    "😔", "😎", "👀", "💔", "😏", "😒", "😌", "😢", "😡", "😳", "🥺", "🤔",
+    "😴", "😋", "😬", "🙃", "😁", "😇", "🤗", "🥰", "😤", "😃", "🌚", "🤦",
+    "🙄", "💙", "💜", "😱", "🫶", "🎉", "💛", "🔥", "😜", "😙", "😐", "😓",
+    "😕", "🤤"
+  ]
+}

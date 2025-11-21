@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Phone motion sender</title>
+</head>
+<body>
+  <button id="start">Start motion streaming</button>
+  <p>Status: <span id="status">idle</span></p>
+
+  <script>
+    const statusEl = document.getElementById('status');
+    let sending = false;
+    let lastSent = 0;
+
+    function logStatus(msg) {
+      console.log('[PHONE]', msg);
+      statusEl.textContent = msg;
+    }
+
+    async function sendMotion(e) {
+      const now = Date.now();
+      // throttle to ~20 Hz
+      if (now - lastSent < 50) return;
+      lastSent = now;
+
+      const a = e.accelerationIncludingGravity || {};
+      const payload = {
+        x: a.x || 0,
+        y: a.y || 0,
+        z: a.z || 0,
+      };
+
+      try {
+        await fetch('/motion', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        // console.log('[PHONE] sent', payload);
+      } catch (err) {
+        console.error('[PHONE] send error', err);
+        logStatus('send error');
+      }
+    }
+
+    document.getElementById('start').addEventListener('click', async () => {
+      if (sending) return;
+      sending = true;
+
+      logStatus('requesting motion permission');
+
+      if (typeof DeviceMotionEvent !== 'undefined' &&
+          typeof DeviceMotionEvent.requestPermission === 'function') {
+        try {
+          const res = await DeviceMotionEvent.requestPermission();
+          logStatus('permission: ' + res);
+          if (res !== 'granted') {
+            alert('Motion permission denied');
+            return;
+          }
+        } catch (e) {
+          console.error('[PHONE] permission error', e);
+          logStatus('permission error');
+          return;
+        }
+      } else {
+        logStatus('no permission API, attaching anyway');
+      }
+
+      window.addEventListener('devicemotion', sendMotion);
+      logStatus('streaming motion…');
+    });
+  </script>
+</body>
+</html>

@@ -142,12 +142,14 @@ function draw() {
     const sw = shortwave24 != null ? shortwave24.toFixed(0) : '--';
     let swColour = map(shortwave24, 0, 60, 250, 20);
     swColour = constrain(swColour, 20, 250);
+    let swBrightness = map(motionMagnitude, 0, 30, 40, 60);
+    swBrightness = constrain(swBrightness, 40, 60);
     let swShift = map(motionX, -20, 20, -80, 80);
     swShift = constrain(swShift, -80, 80);
     
 
     console.log(swColour);
-    background(swColour + swShift, 100, 30);
+    background(swColour + swShift, 100, swBrightness);
 
     // --- HR connect button ---
     const hovering =
@@ -159,9 +161,9 @@ function draw() {
     if (hrConnected) {
         fill(0, 0, 20, textAlpha);
     } else if (hovering) {
-        fill(0, 0, 20, textAlpha * 2);                   // lighter on hover
+        fill(0, 0, 20, textAlpha * 2);                   
     } else {
-        fill(0, 0, 20, textAlpha);                      // default
+        fill(0, 0, 20, textAlpha);                     
     }
     noStroke();
     rect(HR_BTN_X, HR_BTN_Y, HR_BTN_W, HR_BTN_H, 4);
